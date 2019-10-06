@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int main()
+{int matrix[10][10],size,j,i,sum1=0,sum2=0,diff;
+cout<<"enter the size of the square matrix"<<endl;
+cin>>size;
+cout<<"enter "<<size<<"*"<<size<<" matrix elements:"<<endl;
+for(i=0;i<size;i++)
+{
+	for(j=0;j<size;j++)
+	{
+		cout<<" ";
+		cin>>matrix[i][j];
+	}
+}
+cout<<"your matrix is:"<<endl;
+for(i=0;i<size;i++)
+{
+	for(j=0;j<size;j++)
+	{
+		cout<<" "<<matrix[i][j];
+		
+	}
+	cout<<"\n";
+		
+}
+for(i=0;i<size;i++)
+{
+	for(j=0;j<size;j++)
+	{
+		if(i==j)
+		sum1+=matrix[i][j];
+		if((i+j)==(size-1))
+		sum2+=matrix[i][j];
+		
+		
+	}
+	
+}
+	cout<<"the absolute diffrence is"<<endl;
+	if(sum1>sum2)
+diff=sum1-sum2;
+else
+diff=sum2-sum1;	
+cout<<diff;
+return 0;
+
+}
